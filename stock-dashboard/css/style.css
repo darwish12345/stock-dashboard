@@ -1,0 +1,355 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0a0e27;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Navigation */
+.bg-dark {
+    background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    height: calc(100vh - 56px);
+}
+
+/* Watchlist Sidebar */
+.watchlist-sidebar {
+    width: 280px;
+    background: #11162e;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.watchlist-header {
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.watchlist-header h6 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.watchlist-items {
+    flex: 1;
+    padding: 8px;
+}
+
+.watchlist-item {
+    padding: 12px;
+    margin-bottom: 8px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.watchlist-item:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateX(4px);
+}
+
+.watchlist-item.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.watchlist-symbol {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.watchlist-price {
+    font-size: 0.85rem;
+}
+
+.watchlist-change {
+    font-size: 0.75rem;
+}
+
+.change-positive {
+    color: #10b981;
+}
+
+.change-negative {
+    color: #ef4444;
+}
+
+/* Stock Content */
+.stock-content {
+    flex: 1;
+    padding: 24px;
+    overflow-y: auto;
+}
+
+.stock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.stock-info h2 {
+    margin: 0;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.stock-info p {
+    margin: 0;
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.current-price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: right;
+}
+
+.price-change {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.change-positive {
+    color: #10b981;
+}
+
+.change-negative {
+    color: #ef4444;
+}
+
+/* Chart Container */
+.chart-container {
+    background: #11162e;
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.chart-controls {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.time-btn {
+    background: rgba(255,255,255,0.05);
+    border: none;
+    color: #94a3b8;
+    padding: 6px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.time-btn:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.time-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.stat-card {
+    background: #11162e;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Indicators Section */
+.indicators-section {
+    background: #11162e;
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.indicators-section h6 {
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.indicators-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+}
+
+.indicator-card {
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.indicator-label {
+    font-size: 0.7rem;
+    color: #94a3b8;
+    margin-bottom: 4px;
+}
+
+.indicator-value {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.indicator-status {
+    font-size: 0.7rem;
+}
+
+.status-bullish {
+    color: #10b981;
+}
+
+.status-bearish {
+    color: #ef4444;
+}
+
+.status-neutral {
+    color: #f59e0b;
+}
+
+/* Market News */
+.market-news {
+    margin-top: auto;
+    padding: 16px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.news-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.news-item {
+    padding: 8px 0;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.news-item:hover {
+    color: white;
+}
+
+/* Search Results */
+.search-results {
+    margin-top: 12px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.search-result-item {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.search-result-item:hover {
+    background: rgba(255,255,255,0.05);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #11162e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .watchlist-sidebar {
+        width: 80px;
+    }
+    
+    .watchlist-header h6, .watchlist-item .watchlist-price, .watchlist-item .watchlist-change {
+        display: none;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stock-header {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .current-price {
+        text-align: left;
+    }
+}
